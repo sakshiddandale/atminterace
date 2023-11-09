@@ -1,0 +1,96 @@
+CODE!!!
+
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[] )
+    {
+        int balance = 5000, withdraw, deposit;
+        Scanner s = new Scanner(System.in);
+        while(true)
+        {
+            System.out.println("Automated Teller Machine");
+            System.out.println("Choose 1 for Withdraw");
+            System.out.println("Choose 2 for Deposit");
+            System.out.println("Choose 3 for Check Balance");
+            System.out.println("Choose 4 for EXIT");
+            System.out.print("Choose the operation you want to perform:");
+            int n = s.nextInt();
+            switch(n)
+            {
+                case 1:
+                    System.out.print("Enter money to be withdrawn:");
+                    withdraw = s.nextInt();
+                    if(balance >= withdraw)
+                    {
+                        balance = balance - withdraw;
+                        System.out.println("Please collect your money");
+                    }
+                    else
+                    {
+                        System.out.println("Insufficient Balance");
+                    }
+                    System.out.println("");
+                    break;
+
+                case 2:
+                    System.out.print("Enter money to be deposited:");
+                    deposit = s.nextInt();
+                    balance = balance + deposit;
+                    System.out.println("Your Money has been successfully depsited");
+                    System.out.println("");
+                    break;
+
+                case 3:
+                    System.out.println("Balance : "+balance);
+                    System.out.println("");
+                    break;
+
+                case 4:
+                    System.exit(0);
+            }
+        }
+    }
+}
+
+
+
+RESULT!!!
+
+"C:\Program Files\Java\jdk-21\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.4\lib\idea_rt.jar=49915:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.4\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\saksh\IdeaProjects\atminterface\out\production\atminterface Main
+Automated Teller Machine
+Choose 1 for Withdraw
+Choose 2 for Deposit
+Choose 3 for Check Balance
+Choose 4 for EXIT
+Choose the operation you want to perform:
+1
+Enter money to be withdrawn:500
+Please collect your money
+
+Automated Teller Machine
+Choose 1 for Withdraw
+Choose 2 for Deposit
+Choose 3 for Check Balance
+Choose 4 for EXIT
+Choose the operation you want to perform:2
+Enter money to be deposited:560
+Your Money has been successfully depsited
+
+Automated Teller Machine
+Choose 1 for Withdraw
+Choose 2 for Deposit
+Choose 3 for Check Balance
+Choose 4 for EXIT
+Choose the operation you want to perform:3
+Balance : 5060
+
+Automated Teller Machine
+Choose 1 for Withdraw
+Choose 2 for Deposit
+Choose 3 for Check Balance
+Choose 4 for EXIT
+Choose the operation you want to perform:4
+
+Process finished with exit code 0
